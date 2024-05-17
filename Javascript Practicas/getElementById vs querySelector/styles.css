@@ -1,0 +1,12 @@
+body{
+    background:#223;
+}
+
+.card{
+    width: 400px;
+     height: 200px;
+     background: #ffff;
+     box-shadow: 5px 5px 10px #0000;
+     padding: 15px;
+     margin: 15px;
+}
