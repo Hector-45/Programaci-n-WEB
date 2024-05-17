@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Suma</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Suma</h1>
+        <form id="sumForm">
+            <div class="form-group">
+                <label for="num1">Número 1:</label>
+                <input type="number" id="num1" name="num1" required>
+            </div>
+            <div class="form-group">
+                <label for="num2">Número 2:</label>
+                <input type="number" id="num2" name="num2" required>
+            </div>
+            <button type="button" onclick="calcularSuma()">Calcular Suma</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
+ 
