@@ -2,10 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js"></script>
+    <title>Práctica del DOM</title>
   </head>
   <body>
     <div class="product-card">
@@ -13,25 +25,25 @@
         <!-- <img src="./img/gray-benz.jpg" alt="cars" /> -->
       </div>
       <div class="product-description">
-        <h3 class="tag">CAR</h3>
+        <h3 class="tag">CARRO</h3>
         <h1 class="product-title">Mercedez Benz c300 2022</h1>
         <p class="product-details">
           <span class="mileage">
             <span style="font-size: 1em; color: black"
               ><i class="fa-solid fa-car"></i
             ></span>
-            Mileage: 4,000 miles
+            Kilometraje: 4,000 millas
           </span>
           <span class="fuel">
             <span style="font-size: 1em; color: black"
               ><i class="fa-solid fa-gas-pump"></i
             ></span>
-            Fuel: 25mpg
+            Combustible: 25mpg
           </span>
           <span class="safety">
             <span style="font-size: 1em; color: black"
               ><i class="fa-solid fa-shield"></i></span
-            >Safety:
+            >Seguridad:
             <span class="stars">
               <i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
@@ -41,7 +53,7 @@
             </span>
           </span>
         </p>
-        <p>Pick a color:</p>
+        <p>Escoge un color:</p>
         <div class="colors-price">
           <div class="colors">
             <span class="red"></span>
@@ -57,14 +69,15 @@
           <span style="font-size: 1em; color: white">
             <i class="fa-solid fa-cart-shopping"></i>
           </span>
-          <span class="button-text">Add to Cart</span>
+          <span class="button-text">Agregar al carrito</span>
         </button>
         <button class="feedback">
           <span id="white-button"
-            >🥳 Woohoo, You're about to own a benz 🎊</span
+            >? Guao, vas a ser el dueño de un Benz ?</span
           >
         </button>
       </div>
     </div>
+    <script src="./app.js"></script>
   </body>
 </html>
