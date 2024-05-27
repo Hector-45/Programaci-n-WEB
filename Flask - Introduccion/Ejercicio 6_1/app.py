@@ -29,6 +29,26 @@ def registrar_clientes():
         return jsonify({'Mensaje':"CLIENTE REGISTRADO"})
     except Exception as ex:
         return jsonify({'Mensaje':"ERROR"})
+    
+@app.route('/articulos',methods=['POST'])
+def registrar_articulos():
+    try:
+        #print(request.json)
+        cursor = conexion.connection.cursor()
+        sql="""INSERT INTO ARTICULOS(codArticulo, Nombre, Descripcion, precioUnidad, unidadesStock, stockSeguridad, imagen) 
+        VALUES ('{0}','{1}','{2}',{3},{4},'{5}','{6}')""".format(
+            request.json['codArticulo'],
+            request.json['Nombre'],
+            request.json['Descripcion'],
+            request.json['precioUnidad'],
+            request.json['unidadesStock'],
+            request.json['stockSeguridad'],
+            request.json['imagen'])
+        cursor.execute(sql)
+        conexion.connection.commit() #Confirma la accion de insercion
+        return jsonify({'Mensaje':"CLIENTE REGISTRADO"})
+    except Exception as ex:
+        return jsonify({'Mensaje':"ERROR"})
 
 #METODO GET (LISTAR O LEER)
 @app.route('/clientes',methods=['GET'])
@@ -48,6 +68,27 @@ def listar_clientes():
                      'telefono':fila[7],'fechaNacimiento':fila[8]}
             clientes.append(cliente)
         return jsonify({'clientes':clientes,'Mensaje':"CLIENTES LISTADOS"})
+        #print(datos)
+    except Exception as ex:
+        return jsonify({'Mensaje':"ERROR"})
+    
+@app.route('/articulos',methods=['GET'])
+def listar_articulos():
+    #return "Texto prueba"
+    try:
+        cursor = conexion.connection.cursor()
+        sql ="SELECT codArticulo, Nombre, Descripcion, precioUnidad, unidadesStock, stockSeguridad, imagen FROM ARTICULOS"
+        cursor.execute(sql)
+        #fetchall convierte toda la respuesta en algo entendible para PYTHON
+        datos = cursor.fetchall()
+        #MOSTRAR COMO JSON
+        articulos=[]
+        for fila in datos:
+            articulo = {
+                'codArticulo':fila[0],'Nombre':fila[1],'Descripcion':fila[2],
+                'precioUnidad':fila[3],'unidadesStock':fila[4],'stockSeguridad':fila[5],'imagen':fila[6]}
+            articulos.append(articulo)
+        return jsonify({'clientes':articulos,'Mensaje':"ARTICULOS LISTADOS"})
         #print(datos)
     except Exception as ex:
         return jsonify({'Mensaje':"ERROR"})
@@ -73,6 +114,27 @@ def actualizar_clientes(codCliente):
         return jsonify({'Mensaje':"CLIENTE ACTUALIZADO"}) 
     except Exception as ex:
         return jsonify({'Mensaje':"ERROR"})
+    
+@app.route('/articulos/<codArticulo>',methods=['PUT'])
+def actualizar_articulos(codArticulo):
+    try:
+        #print(request.json)
+        cursor = conexion.connection.cursor()
+        sql="""UPDATE ARTICULOS SET 
+        Nombre='{0}', Descripcion='{1}', precioUnidad={2}, 
+        unidadesStock={3}, stockSeguridad='{4}', imagen='{5}'
+        WHERE codArticulo='{6}'""".format(
+            request.json['Nombre'],
+            request.json['Descripcion'],
+            request.json['precioUnidad'],
+            request.json['unidadesStock'],
+            request.json['stockSeguridad'],
+            request.json['imagen'],codArticulo)
+        cursor.execute(sql)
+        conexion.connection.commit() #Confirma la accion de insercion
+        return jsonify({'Mensaje':"CLIENTE ACTUALIZADO"}) 
+    except Exception as ex:
+        return jsonify({'Mensaje':"ERROR"})
 
 #METODO DELETE (ELIMINAR)
 @app.route('/clientes/<codCliente>',methods=['DELETE'])
@@ -84,6 +146,18 @@ def eliminar_clientes(codCliente):
         cursor.execute(sql)
         conexion.connection.commit() #Confirma la accion de insercion
         return jsonify({'Mensaje':"CLIENTE ELIMINADO"})
+    except Exception as ex:
+        return jsonify({'Mensaje':"ERROR"})
+    
+@app.route('/articulos/<codArticulo>',methods=['DELETE'])
+def eliminar_articulos(codArticulo):
+    try:
+        #print(request.json)
+        cursor = conexion.connection.cursor()
+        sql="DELETE FROM ARTICULOS WHERE codArticulo='{0}'".format(codArticulo)
+        cursor.execute(sql)
+        conexion.connection.commit() #Confirma la accion de insercion
+        return jsonify({'Mensaje':"ARTICULO ELIMINADO"})
     except Exception as ex:
         return jsonify({'Mensaje':"ERROR"})
 
