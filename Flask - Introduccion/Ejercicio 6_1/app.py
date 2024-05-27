@@ -52,7 +52,7 @@ def listar_clientes():
     except Exception as ex:
         return jsonify({'Mensaje':"ERROR"})
 
-
+#METODO POST (ACTUALIZAR)
 @app.route('/clientes/<codCliente>',methods=['PUT'])
 def actualizar_clientes(codCliente):
     try:
@@ -74,6 +74,7 @@ def actualizar_clientes(codCliente):
     except Exception as ex:
         return jsonify({'Mensaje':"ERROR"})
 
+#METODO DELETE (ELIMINAR)
 @app.route('/clientes/<codCliente>',methods=['DELETE'])
 def eliminar_clientes(codCliente):
     try:
