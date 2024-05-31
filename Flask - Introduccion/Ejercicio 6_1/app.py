@@ -93,7 +93,7 @@ def listar_articulos():
     except Exception as ex:
         return jsonify({'Mensaje':"ERROR"})
 
-#METODO POST (ACTUALIZAR)
+#METODO PUT (ACTUALIZAR)
 @app.route('/clientes/<codCliente>',methods=['PUT'])
 def actualizar_clientes(codCliente):
     try:
