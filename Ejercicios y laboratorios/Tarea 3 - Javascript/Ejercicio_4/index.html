@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora básica</title>
+</head>
+<body>
+    <form class="formulario">
+        <h4 class="titulo">Calculadora básica</h4>
+        <img class="imagen" src="R.png" alt="" width="110" height="100">
+        <input type="number" id="valor1"  class="accion" name="nombres" id="nombres" placeholder="Ingrese el primer numero">
+        <input type="number" id="valor2"  class="accion" name="apellidos" id="apellidos" placeholder="Ingrese el segundo numero">
+        <h3>El resultado es: <span id="resultado"></span> </h3>
+    
+        <button type="button" onclick="sumar()" class="boton" >+</button>
+        <button type="button" onclick="restar()" class="boton" >-</button>
+        <button type="button" onclick="multiplicar()" class="boton">*</button>
+        <button type="button" onclick="dividir()" class="boton">/</button>
+        <button onclick="limpiar()" class="botonLimpiar">Limpiar</button>
+        
+       <!--<input type="submit" onclick="Enviar()" class="boton" value="Enviar">-->
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>

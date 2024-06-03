@@ -1,0 +1,73 @@
+/*Colapsado de margenes*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.imagen{
+    margin-left: 115px;
+    
+}
+.titulo{
+    text-align: center;
+}
+
+.formulario{
+    width: 400px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    border-radius: 15px;
+    font-family: 'calibri';
+    color: white;
+    background-color: rgb(172, 150, 192);
+}
+
+.formulario h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.formulario h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.accion{
+    width: 100%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #000000;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.formulario .boton{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #181d29;
+    border: none;
+    padding: 12px;
+    margin: 16px 0px;
+    font-size: 20px;
+    color: white;
+}
+
+.formulario .botonLimpiar{
+    width: 85px;
+    height: 50px;
+    border-radius: 20px;
+    background: #181d29;
+    border: none;
+    padding: 12px;
+    margin: 16px 0px;
+    font-size: 20px;
+    color: white
+}

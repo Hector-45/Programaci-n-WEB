@@ -1,0 +1,56 @@
+.contenedor{
+    background-color: rgb(230, 253, 243);
+    height: 70vh;
+    margin: 5%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.caja{
+    align-items: center;
+    border-radius: 20px;
+    height: 70vh;
+    width: 8%;
+    background-color: rgb(123, 209, 247);
+}
+
+.btn{
+    border: none;
+
+    color: white;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+}
+
+.verde{
+    background-color: #04AA6D;
+}
+.verde:hover{
+    background-color: #028354;
+}
+
+.azul{
+    background-color: #2142d1;
+}
+
+.amarillo{
+    background-color: rgb(245, 245, 0);
+    color: black;
+    padding: 20px 10px;
+}
+
+.negro{
+    background-color: black;
+}
+
+.violeta{
+    background-color: violet;
+    color: black;
+    padding: 20px 10px;
+}

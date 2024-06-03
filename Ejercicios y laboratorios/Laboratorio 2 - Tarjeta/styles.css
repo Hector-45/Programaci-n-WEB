@@ -1,0 +1,124 @@
+.contenedor{
+    background-color: rgb(230, 253, 243);
+    height: 165vh;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hijo1{
+    background-image: url(/imagenes/banner.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center 30%;
+    border-radius: 20px;
+    height: 165vh;
+    width: 40%;
+    background-color: rgb(123, 209, 247);
+    position: absolute;
+}
+
+.hijo2{
+    background-image: url(/imagenes/Logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    /*border: 1px solid black;*/
+    height: 40%;
+    width: 44%;
+    position: relative;
+    bottom:380px;
+}
+
+.nieto{
+    /*border: 1px solid black;*/
+    background-color: white;
+    /*background-image: url(/imagenes/icons8-name-tag-100.png),url(/imagenes/icons8-policy-document-100.png),url(/imagenes/icons8-validation-100.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: left 280px,left 160px,left 50px;*/
+    border-radius: 0 0 20px 20px;
+    height: 83vh;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+}
+
+.caja1{
+    /*border: 1px solid;*/
+    padding-top: 5%;
+    height: 10vh;
+    width: 100%;
+    text-align: center;
+    font-family:sans-serif;
+    color:rgb(33, 110, 161);
+}
+
+.caja2{
+    background-image: url(/imagenes/icons8-name-tag-100.png);
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position-x: 30px;
+    background-position-y: 0px;
+    margin-top: 5%;
+    /*border: 1px solid;*/
+    height: 20vh;
+    width: 100%;
+}
+
+.caja2 h3{
+    text-align: center;
+    font-family:sans-serif;
+    color:rgb(33, 110, 161);
+
+}
+
+.caja2 p{
+   margin-left: 144px;
+   padding-right: 60px;
+}
+
+.caja3{
+    background-image: url(/imagenes/icons8-validation-100.png);
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position-x: 30px;
+    background-position-y: 0px;
+    /*border: 1px solid;*/
+    height: 20vh;
+    width: 100%;
+}
+
+.caja3 h3{
+    text-align: center;
+    font-family:sans-serif;
+    color:rgb(33, 110, 161);
+}
+
+.caja3 p{
+   margin-left: 144px;
+   padding-right: 60px;
+}
+
+.caja4{
+    background-image: url(/imagenes/icons8-policy-document-100.png);
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position-x: 30px;
+    background-position-y: 0px;
+    /*border: 1px solid;*/
+    height: 20vh;
+    width: 100%;
+}
+
+.caja4 h3{
+    text-align: center;
+    margin-left: 50px;
+    font-family:sans-serif;
+    color:rgb(33, 110, 161);
+}
+
+.caja4 p{
+   margin-left: 144px;
+   padding-right: 60px;
+}

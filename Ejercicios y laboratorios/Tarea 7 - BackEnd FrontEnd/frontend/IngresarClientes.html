@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesEditionProduct.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Editar clientes</title>
+</head>
+<body>
+    <!--<nav>
+        <a href="../index.html">Inicio</a>
+        <a href="../pages/user.html">Registrarse</a>
+        <a href="../pages/login.html">Iniciar Sesión</a>
+        <a href="../pages/EditionProduct.html">Editar productos</a>
+    </nav>-->
+    <header>
+        <div class="interior">
+            <!--<a href="#" class="logo" target="blank"><img src="../images/e-commerce.png" alt="Logo"></a>-->
+            <nav class="navegacion">
+              <ul>
+                <li><a href="/frontend/IngresarClientes.html" target="_self">Registro de clientes</a></li>
+                <li class="submenu">
+                  <a href="/frontend/listarArticulos.html" target="_self">Listado de clientes</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+    </header>
+    <!-- <div class="contenedor">
+        <div class="cajaLeft">
+            <div class="cajaHija">
+                <a href="#">Clientes</a>
+            </div>
+            <div class="cajaHija">
+                <a href="#">Nuevo cliente</a>
+            </div>
+        </div> -->
+        <form id="formulario" class="formulario">
+            <h4 class="titulo">Registro de clientes</h4>
+            <!--<img class="imagen" src="" alt="" width="110" height="100">-->
+            <input type="text" class="accion" name="nombres" id="nombres" placeholder="Nombre del cliente" required>
+            <!--<input type="text" class="accion" name="apellidos" id="apellidos" placeholder="Ingrese su apellido">-->
+            <input type="text" class="accion" name="apellido" id="apellido" placeholder="apellido" required>
+            <input type="text" class="accion" name="empresa" id="empresa" placeholder="empresa" required>
+            <input type="text" class="accion" name="puesto" id="puesto" placeholder="puesto" required>
+            <input type="number" class="accion" name="CP" id="cp" placeholder="CP" required>
+            <input type="text" class="accion" name="provincia" id="provincia" placeholder="provincia" required> 
+            <input type="number" class="accion" name="telefono" id="telefono" placeholder="Telefono" required>
+            <input type="text" class="accion" name="fechaNacimiento" id="fechaNacimiento" placeholder="Fecha Nacimiento" required>
+            
+            <!--<textarea class="accion" name="" id="" cols="30" rows="10" placeholder="Sugerencias"></textarea>
+            <h3>Deseo recibir información sobre novedades y ofertas</h3>
+            Sí: <input type="checkbox"name="opcion1" value="opcion1">
+            No: <input type="checkbox"name="opcion2" value="opcion2">
+            <br>
+            <h3>Declaro haber leido y aceptar las condiciones 
+                generales del programa y la normativa sbore 
+                protección de datos
+            </h3>
+            Sí: <input type="checkbox">-->
+            <input type="submit" class="boton" value="Guardar cambios">
+        </form>
+        <script src="ingresarClientes.js"></script>
+</body>
+</html>
